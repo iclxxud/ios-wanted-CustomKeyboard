@@ -8,6 +8,7 @@
 import XCTest
 @testable import CustomKeyboard
 
+// FIXME: 실패하는 케이스도 해보면 어떨까요
 class CustomKeyBoardViewModel_publicMethod__test: XCTestCase {
     
     var sut: CustomKeyBoardViewModel?

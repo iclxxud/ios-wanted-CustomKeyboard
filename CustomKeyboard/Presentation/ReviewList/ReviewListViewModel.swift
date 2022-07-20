@@ -44,6 +44,7 @@ class ReviewListViewModel {
         return reviewDatas.count
     }
     
+    // FIXME: get prefix는... 안쓰는게 좋습니다!
     func getCellData(indexPath: IndexPath) -> CellType? {
         
         let row = indexPath.row
@@ -75,6 +76,7 @@ class ReviewListViewModel {
         
         let createdDateString: String
         let now = Date()
+        // FIXME: 함수가 생성될때마다 DateFormatter를 생성하면 비용이 너무 많이들어요~
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         

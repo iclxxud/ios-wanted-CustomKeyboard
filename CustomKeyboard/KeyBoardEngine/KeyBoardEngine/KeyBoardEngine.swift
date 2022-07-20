@@ -5,11 +5,16 @@
 //  Created by 김기림 on 2022/07/14.
 //
 
+// FIXME: 전체적으로 로직 자체는 어쩔 수 없이 복잡하지만, 함수로 잘 나누어져있어서 깔끔해보이네요. 나이스!
+
 import Foundation
 import UIKit
+// FIXME: Foundation이랑 UIKit은 어떻게 다르고, 둘 다 사용해야 하나요?
 
+// FIXME: struct로 사용한 이유?
 struct KeyBoardEngine: KeyBoardEngineProtocol {
     
+    // FIXME: 접근제어자 필요 없나용?
     enum SeparatedUnicode {
         case perfect(initial:Int, neutral:Int, support:Int)
         case perfectNoSupport(initial:Int, neutral:Int)
@@ -19,8 +24,10 @@ struct KeyBoardEngine: KeyBoardEngineProtocol {
     
     func addWord(inputUniCode:Int, lastUniCode:Int) -> String {
         
+        // FIXME: 여기 타입명시 꼭 해야하나용?
         let parsedLastUnicode: SeparatedUnicode = SeparatingUnicode(unicode: lastUniCode)
         
+        // FIXME: let 앞으로 빼는 문법도 있습니답. 내부에 적절히 줄바꿈도 필요해보여요~
         switch parsedLastUnicode {
         case .perfect(let initial, let neutral, let support):
             return combineToPerfactChar(initial:initial, neutral: neutral, support: support, inputLetter: inputUniCode)

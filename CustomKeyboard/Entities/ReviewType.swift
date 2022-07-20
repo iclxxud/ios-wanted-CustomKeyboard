@@ -27,6 +27,8 @@ struct ReviewType: Codable {
     }
 }
 
+// FIXME: 모델별로 파일 분리해주는게 좋아보여요. 위 두개는 같이 있어도 될거같은데 User은 따로 있는게 낫지않을까?하는 의견입니다~
+
 // MARK: - User
 struct User: Codable {
     var id: String

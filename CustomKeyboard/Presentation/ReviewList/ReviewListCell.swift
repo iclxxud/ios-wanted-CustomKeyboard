@@ -10,8 +10,10 @@ import UIKit
 class ReviewListCell: UICollectionViewCell {
     
     // MARK: - Properties
+    // FIXME: identifier를 프로토콜로 만들어주세용~
     static let identifier = "ReviewListCell"
     
+    // FIXME: 접근제어자?
     let profileImage = UIImageView()
     let userNameLabel = UILabel()
     let contentsLabel = UILabel()
@@ -42,6 +44,7 @@ class ReviewListCell: UICollectionViewCell {
         timeLabel.text = data.createdAt
     }
     
+    // FIXME: 여기는 draw로 가기로햇나요~?
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.profileImage.layer.cornerRadius =  self.profileImage.frame.height / 2

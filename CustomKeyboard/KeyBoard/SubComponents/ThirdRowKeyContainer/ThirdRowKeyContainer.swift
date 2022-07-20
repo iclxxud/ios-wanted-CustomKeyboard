@@ -7,6 +7,7 @@
 
 import UIKit
 
+// FIXME: final 키워드가 빠진곳이 많아요~
 class ThirdRowKeyContainer: UIStackView {
     
     // MARK: - Properties
@@ -74,6 +75,7 @@ extension ThirdRowKeyContainer {
         
         thirdLineBasicKeys.delegate = self
         
+        // FIXME: String은 따로 관리해주는 것이 좋습니다!
         shiftButton.setTitle("shift", for: .normal)
         shiftButton.addTarget(self, action: #selector(tappedShiftButton), for: .touchUpInside)
         

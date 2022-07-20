@@ -8,6 +8,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    // FIXME: 화면의 넓이랑, 높이 가져오는거 이 방식말고 다른거 있어요. 요거 다소 어색해보여요!
     var windowWidth: CGFloat?
     var windowHeight: CGFloat?
 

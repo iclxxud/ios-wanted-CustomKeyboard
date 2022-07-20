@@ -7,6 +7,7 @@
 
 import Foundation
 
+// FIXME: 에러 따로 한 부분 좋습니다!
 enum CustomError: Error {
     case makeURLError
     case loadError

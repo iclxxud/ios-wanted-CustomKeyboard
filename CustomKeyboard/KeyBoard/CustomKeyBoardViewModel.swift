@@ -49,6 +49,7 @@ struct CustomKeyBoardViewModel {
         guard text != "" else { return nil }
         let lastChar = String(text.last!)
         return Int(UnicodeScalar(lastChar)!.value)
+        // FIXME: 강제 언래핑이 또 있네욥!
     }
     
     private func getStringExceptLastChar(from text: String) -> String? {

@@ -7,13 +7,16 @@
 
 import UIKit
 
+// FIXME: final 키워드가 필요하진 않나용?, 추가로 stackView를 상속받은걸 알 수 있게 네이밍 해야할거같아요!
 class CustomKeyBoard: UIStackView {
     
     struct Math {
+        // FIXME: 강제 언래핑을 사용해도 되나요??
         static var keyboardWidth: CGFloat {
             let sceneDelegate = UIApplication.shared.connectedScenes
                 .first!.delegate as! SceneDelegate
             return sceneDelegate.windowWidth!
+            // FIXME: 화면의 넓이를 가져오는 다른 방법이 있을거에요. 다시 찾아봅시다~
         }
         static let keyboardHeight: CGFloat = keyboardWidth < 340 ? keyboardWidth*3/5 : keyboardWidth*3/4
         static let buttonPadding = 5.0
@@ -103,7 +106,7 @@ extension CustomKeyBoard {
     }
     
     private func configureAttribute() {
-        
+        // FIXME: self 필요한가용?
         self.backgroundColor = .systemGray3
         self.axis = .vertical
         self.distribution = .equalSpacing
