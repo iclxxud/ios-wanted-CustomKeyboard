@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CustomKeyBoard: UIStackView {
+class CustomKeyBoard: UIStackView {
     
     struct Math {
         static var keyboardWidth: CGFloat {
